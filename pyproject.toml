@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "drift-batch-blame"
+version = "0.1.0"
+description = "Provenance-level attribution for dataset drift: leave-one-batch-out replay, Shapley-style batch blame and a greedy minimal blame set that names the ingestion batches that caused the drift, not just the features that moved."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Amna Raheeba" }]
+
+[tool.setuptools]
+packages = ["drift_blame"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
